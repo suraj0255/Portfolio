@@ -1,0 +1,152 @@
+﻿@page "/"
+
+<section class="hero">
+    <div class="hero-content">
+        <div class="hero-left">
+            <img src="images/SurajKushwaha.jpg" alt="Suraj Kushwaha" class="hero-avatar" />
+        </div>
+        <div class="hero-right">
+            <h1 class="hero-title">Suraj Kushwaha</h1>
+            <p class="hero-subtitle">Software Developer | .NET | ML | Cloud | APIs</p>
+            <p class="hero-desc">
+                Crafting performant, enterprise-grade software solutions using .NET Core, Blazor,
+                and intelligent ML pipelines that power future-facing systems.
+            </p>
+            <div class="hero-actions">
+                <a href="projects" class="btn-primary">🚀 View My Work</a>
+                <a href="contactMe" class="btn-secondary">📩 Contact Me</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        width: 100%;
+        min-height: 90vh;
+        padding: 4rem 0;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(24px);
+        border-radius: 1.5rem;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+        position: relative;
+    }
+
+    .hero-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+    }
+
+    .hero-left {
+        flex: 1 1 320px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .hero-avatar {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        border: 4px solid #ffbe55;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        object-fit: cover;
+        background: #fff;
+    }
+
+    .hero-right {
+        flex: 2 1 600px;
+        font-family: 'Poppins', sans-serif;
+        color: #f5f5f5;
+        padding: 0 1.5rem;
+    }
+
+    .hero-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+        color: #ffbe55;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-bottom: 1.5rem;
+        color: #2ecc71;
+    }
+
+    .hero-desc {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 2.5rem;
+        max-width: 700px;
+        color: #ddd;
+    }
+
+    .hero-actions {
+        display: flex;
+        gap: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 0.85rem 1.8rem;
+        border-radius: 1.8rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, #ffbe55 0%, #2ecc71 100%);
+        color: #000;
+        border: none;
+    }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+        }
+
+    .btn-secondary {
+        background: transparent;
+        color: #ffbe55;
+        border: 2px solid #ffbe55;
+    }
+
+        .btn-secondary:hover {
+            background: #ffbe55;
+            color: #000;
+        }
+
+    @@media (max-width: 768px) {
+        .hero {
+            padding: 2rem 0;
+            border-radius: 0;
+        }
+
+        .hero-content {
+            flex-direction: column;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero-title {
+            font-size: 2.2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+        }
+
+        .hero-avatar {
+            width: 240px;
+            height: 240px;
+        }
+    }
+</style>

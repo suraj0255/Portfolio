@@ -1,0 +1,186 @@
+﻿@page "/skills"
+
+<section class="skills">
+    <div class="skills-content">
+        <h1 class="skills-title">⚡ My Skills</h1>
+        <p class="skills-desc">
+            A blend of programming expertise, web development, database management, ITS/IoT exposure, cloud practices, and applied machine learning.
+            Here’s what I bring to the table:
+        </p>
+
+        <div class="skills-grid">
+
+            <!-- Programming -->
+            <div class="skill-card">
+                <h2>💻 Programming</h2>
+                <ul>
+                    <li><b>C#</b> — OOP, LINQ, async/await, exception handling</li>
+                    <li><b>C++</b> — STL, pointers, memory management, problem solving</li>
+                    <li><b>Python</b> — scripting, automation, data handling</li>
+                    <li><b>JavaScript</b> — ES6+, DOM manipulation</li>
+                </ul>
+            </div>
+
+            <!-- Machine Learning -->
+            <div class="skill-card">
+                <h2>🤖 Machine Learning</h2>
+                <ul>
+                    <li><b>Python frameworks</b>: Scikit-learn, TensorFlow, PyTorch, Keras</li>
+                    <li>ML.NET for .NET ecosystem</li>
+                    <li>Computer vision: object detection, speed violation, wrong-side driving</li>
+                </ul>
+            </div>
+
+            <!-- Web Development -->
+            <div class="skill-card">
+                <h2>🌐 Web Development</h2>
+                <ul>
+                    <li>ASP.NET Core (MVC, Blazor, Web API)</li>
+                    <li>Flask for lightweight apps</li>
+                    <li>HTML5, CSS3, Bootstrap for UI/UX</li>
+                </ul>
+            </div>
+
+            <!-- Database -->
+            <div class="skill-card">
+                <h2>🗄️ Database Management</h2>
+                <ul>
+                    <li>SQL Server, MySQL</li>
+                    <li>Entity Framework Core</li>
+                    <li>Stored procedures & query optimization</li>
+                </ul>
+            </div>
+
+            <!-- ITS & IoT -->
+            <div class="skill-card">
+                <h2>🚦 ITS & IoT</h2>
+                <ul>
+                    <li>ATMS, TMS modules (traffic monitoring, violation detection)</li>
+                    <li>ANPR / CCTV system integration</li>
+                    <li>IoT data handling (sensor + device communication)</li>
+                </ul>
+            </div>
+
+            <!-- Cloud & DevOps -->
+            <div class="skill-card">
+                <h2>☁️ Cloud & DevOps</h2>
+                <ul>
+                    <li>Microsoft Azure basics</li>
+                    <li>Docker containerization</li>
+                    <li>CI/CD pipelines</li>
+                    <li>Git & version control</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+    .skills {
+        width: 100%;
+        min-height: 90vh;
+        padding: 4rem 0;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(24px);
+        border-radius: 1.5rem;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+        position: relative;
+    }
+
+    .skills-content {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 0 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .skills-title {
+        font-size: 2.6rem;
+        font-weight: 700;
+        color: #ffbe55;
+    }
+
+    .skills-desc {
+        font-size: 1.2rem;
+        color: #ddd;
+        max-width: 800px;
+        line-height: 1.7;
+    }
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .skill-card {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        padding: 2rem;
+        border: 1px solid rgba(255, 190, 85, 0.3);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+        text-align: left;
+        color: #f5f5f5;
+        transition: all 0.3s ease;
+    }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .skill-card h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #2ecc71;
+            margin-bottom: 1rem;
+        }
+
+        .skill-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-card li {
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 0.6rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+            .skill-card li::before {
+                content: "✔";
+                position: absolute;
+                left: 0;
+                color: #ffbe55;
+                font-size: 0.9rem;
+            }
+
+    @@media (max-width: 768px) {
+        .skills {
+            padding: 2rem 0;
+            border-radius: 0;
+        }
+
+        .skills-title {
+            font-size: 2rem;
+        }
+
+        .skills-desc {
+            font-size: 1rem;
+        }
+
+        .skill-card {
+            padding: 1.5rem;
+        }
+    }
+</style>

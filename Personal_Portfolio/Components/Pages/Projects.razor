@@ -1,0 +1,223 @@
+﻿@page "/projects"
+
+<div class="projects-wrapper">
+    <h1 class="page-title">My Projects</h1>
+
+    <!-- Project 1 -->
+    <section class="project glass-card">
+        <div class="project-left">
+            <h2 class="section-title">AI-Powered Traffic Management System</h2>
+            <p>
+                Designed and developed an Intelligent Traffic Management System with
+                real-time vehicle tracking, incident detection using C#, .NET, and Blazor.
+                Integrated IoT devices for on-ground data collection
+                and implemented an analytics dashboard for live operator insights.
+            </p>
+            <ul class="bullets">
+                <li>Real-time vehicle location tracking and congestion heatmaps.</li>
+                <li>Automated signal control algorithms to optimize traffic flow.</li>
+                <li>Incident detection and alerting for quick operator response.</li>
+            </ul>
+            @* <div class="hero-actions">
+                <a class="btn-primary" href="#" target="_blank" rel="noopener">View Demo</a>
+                <a class="btn-secondary" href="#" target="_blank" rel="noopener">Read Case Study</a>
+            </div> *@
+            <span class="project-tech">Tech: C#, Blazor, SQL Server, IoT</span>
+        </div>
+        <div class="project-right">
+            <div class="project-preview">
+                <img src="images/vehDetect.PNG" alt="Traffic Management Preview" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 2 -->
+    <section class="project glass-card">
+        <div class="project-left">
+            <h2 class="section-title">Toll Management System – Audit Module</h2>
+            <p>
+                Developed a Toll Management Audit Module ensuring compliance and
+                transparent reporting for highway projects as per the policy.
+            </p>
+            <ul class="bullets">
+                <li>Automated toll data reconciliation workflows.</li>
+                <li>Audit-ready compliance reports with export features.</li>
+                <li>Role-based access for operators and auditors.</li>
+            </ul>
+            @* <div class="hero-actions">
+                <a class="btn-primary" href="#" target="_blank" rel="noopener">View Demo</a>
+                <a class="btn-secondary" href="#" target="_blank" rel="noopener">Read Case Study</a>
+            </div> *@
+            <span class="project-tech">Tech: ASP.NET Core, SQL Server, Blazor, REST API</span>
+        </div>
+        <div class="project-right">
+            <div class="project-preview">
+                <img src="images/TMS-AUDIT-NONFASTAG.PNG" alt="Toll Management Preview" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 3 -->
+    <section class="project glass-card">
+        <div class="project-left">
+            <h2 class="section-title">Automated Waste Classification Assistant</h2>
+            <p>
+                Developed a machine learning-model for waste classification,
+                enabling automatic detection of waste categories (plastic, metal, trash, etc.)
+                and integration with mobile apps.
+            </p>
+            <ul class="bullets">
+                <li>Trained custom CNN models for image-based waste classification.</li>
+                <li>Developedd lightweight web UI for rapid deployment.</li>
+            </ul>
+            @* <div class="hero-actions">
+                <a class="btn-primary" href="#" target="_blank" rel="noopener">View Demo</a>
+                <a class="btn-secondary" href="#" target="_blank" rel="noopener">Read Case Study</a>
+            </div> *@
+            <span class="project-tech">Tech: Python, Flask, TensorFlow, REST API</span>
+        </div>
+        <div class="project-right">
+            <div class="project-preview">
+                <img src="images/vehicleDetection.PNG" alt="Waste Classification Preview" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Project 4 -->
+    <section class="project glass-card">
+        <div class="project-left">
+            <h2 class="section-title">ADVANCED TRAFFIC MANAGEMENT SYSTEM(ATMS)-DASHBOARD</h2>
+            <p>
+                Developed a Toll Management Audit Module ensuring compliance and
+                transparent reporting for highway projects as per the policy.
+            </p>
+            <ul class="bullets">
+                <li>Automated toll data reconciliation workflows.</li>
+                <li>Audit-ready compliance reports with export features.</li>
+                <li>Role-based access for operators and auditors.</li>
+            </ul>
+           @*  <div class="hero-actions">
+                <a class="btn-primary" href="#" target="_blank" rel="noopener">View Demo</a>
+                <a class="btn-secondary" href="#" target="_blank" rel="noopener">Read Case Study</a>
+            </div> *@
+            <span class="project-tech">Tech: ASP.NET Core, SQL Server, Blazor, SignalR</span>
+        </div>
+        <div class="project-right">
+            <div class="project-preview">
+                <img src="images/ATMS4.PNG" alt="Toll Management Preview" />
+            </div>
+        </div>
+    </section>
+</div>
+
+<style>
+    .projects-wrapper {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(24px);
+        border-radius: 1.5rem;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+    }
+
+    .page-title {
+        text-align: center;
+        font-size: 2.4rem;
+        font-weight: 700;
+        color: #ffbe55;
+        margin-bottom: 1rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .project {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 2rem;
+        align-items: center;
+        padding: 2rem;
+        border-radius: 1.2rem;
+        background: rgba(255,255,255,0.03);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .project:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+        }
+
+    .project-left .section-title {
+        margin-bottom: .5rem;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #2ecc71;
+    }
+
+    .project p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #ddd;
+    }
+
+    .bullets {
+        margin: .5rem 0 0 1.2rem;
+    }
+
+        .bullets li {
+            margin: .3rem 0;
+            color: #ccc;
+        }
+
+    .hero-actions {
+        display: flex;
+        gap: 1rem;
+        margin-top: 1.2rem;
+        flex-wrap: wrap;
+    }
+
+    .project-tech {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+        color: #ffbe55;
+        font-weight: 600;
+    }
+
+    .project-preview {
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 3px solid #ffbe55;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+        background: #fff;
+    }
+
+        .project-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .project-preview:hover img {
+            transform: scale(1.05);
+        }
+
+    /* Responsive */
+    @@media (max-width: 1024px) {
+        .project
+
+    {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    }
+</style>

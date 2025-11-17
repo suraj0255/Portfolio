@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hlE4l4BRL9Q=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Apple\\Desktop\\Suraj_Portfolio\\Personal_Portfolio\\Personal_Portfolio.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Apple\\.nuget\\packages\\dnsclient\\1.8.0\\dnsclient.1.8.0.nupkg.sha512"
+  ],
+  "logs": []
+}

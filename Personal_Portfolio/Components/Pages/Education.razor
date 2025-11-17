@@ -1,0 +1,247 @@
+﻿@page "/education"
+
+<PageTitle>Education & Achievements</PageTitle>
+
+<!-- Education -->
+<section class="edu glass-card">
+    <h2 class="section-title">🎓 Education</h2>
+    <div class="timeline">
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+                <h3><span class="degree">MCA</span> — <span class="college">PCCOE, Savitribai Phule Pune University</span></h3>
+                <p class="tl-meta">77.80% (8.19 CGPA) • 2024</p>
+                <p>Advanced computing, software engineering, and applied ML.</p>
+            </div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+                <h3><span class="degree">B.Sc (Hons) Electronics</span> — <span class="college">Hansraj College, University of Delhi</span></h3>
+                <p class="tl-meta">64.69% • 2021</p>
+                <p>Electronics & computing foundations — analytical problem-solving focus.</p>
+            </div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+                <h3><span class="degree">12th</span> — <span class="college">T N Janta Intermediate College</span></h3>
+                <p class="tl-meta">90%</p>
+            </div>
+        </div>
+        <div class="tl-item">
+            <div class="tl-dot"></div>
+            <div class="tl-content">
+                <h3><span class="degree">10th</span> — <span class="college">T N Janta Intermediate College</span></h3>
+                <p class="tl-meta">84.67%</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Achievements -->
+<section class="achievements glass-card">
+    <h2 class="section-title">🏆 Achievements</h2>
+    <ul>
+        <li>Secured <strong>AIR 108</strong>, 99.46 Percentile in MAH MCA-CET (2022).</li>
+        <li>Won group western dance competitions at IIT Bombay, FMS Delhi, and Punjab University.</li>
+    </ul>
+</section>
+
+<!-- Certifications -->
+<section class="certifications glass-card">
+    <h2 class="section-title">📜 Certifications</h2>
+    <div class="cert-grid">
+        <div class="cert-card" @onclick='() => ShowCertificate("FrontendCertificate2.jpg")'>
+            <h3>Full Stack Web Development</h3>
+            <p>Coding Ninjas</p>
+        </div>
+        <div class="cert-card" @onclick='() => ShowCertificate("IIT_BOMBAY_ML.jpg")'>
+            <h3>Data Structures & Algorithms in C++</h3>
+            <p>Coding Ninjas</p>
+        </div>
+    </div>
+</section>
+
+<!-- Modal for certificate preview -->
+@if (showModal)
+{
+    <div class="modal-backdrop" @onclick="CloseModal">
+        <div class="modal-content" @onclick:stopPropagation>
+            <button class="close-btn" @onclick="CloseModal">✖</button>
+            <img src="@currentCertificate" alt="Certificate" />
+        </div>
+    </div>
+}
+
+<style>
+    .glass-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(20px);
+        border-radius: 1.5rem;
+        padding: 2rem;
+        margin: 2rem 0;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #ffbe55;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    /* Timeline */
+    .timeline {
+        position: relative;
+        margin-left: 2rem;
+        border-left: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .tl-item {
+        position: relative;
+        margin: 1.8rem 0;
+        padding-left: 1.5rem;
+    }
+
+    .tl-dot {
+        position: absolute;
+        left: -11px;
+        top: 10px;
+        width: 16px;
+        height: 16px;
+        background: #ffbe55;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #ffbe55;
+    }
+
+    .tl-content h3 {
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: #f5f5f5;
+    }
+
+    .degree {
+        color: #ffbe55;
+        font-weight: 700;
+    }
+
+    .college {
+        color: #2ecc71;
+        font-weight: 600;
+    }
+
+    .tl-meta {
+        font-size: 0.95rem;
+        color: #ddd;
+        margin-bottom: 0.4rem;
+    }
+
+    /* Achievements */
+    .achievements ul {
+        list-style: "✔ ";
+        padding-left: 1.2rem;
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #eee;
+    }
+
+    /* Certifications */
+    .cert-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .cert-card {
+        background: rgba(255, 255, 255, 0.6);
+        padding: 1.2rem;
+        border-radius: 1rem;
+        cursor: pointer;
+        text-align: center;
+        transition: transform 0.3s, box-shadow 0.3s;
+        color: #000;
+    }
+
+        .cert-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+    /* Modal */
+    .modal-backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0,0,0,0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .modal-content {
+        background: white;
+        border-radius: 1rem;
+        padding: 1rem;
+        max-width: 70%;
+        max-height: 70%;
+        overflow: auto;
+        position: relative;
+    }
+
+        .modal-content img {
+            width: 100%;
+            border-radius: 0.8rem;
+        }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: transparent;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    /* Responsive */
+    @@media (max-width: 768px) {
+        .timeline
+
+    {
+        margin-left: 1rem;
+    }
+
+    .tl-content h3 {
+        font-size: 1.1rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    }
+</style>
+
+@code {
+    private bool showModal = false;
+    private string? currentCertificate;
+
+    private void ShowCertificate(string fileName)
+    {
+        currentCertificate = $"images/certificates/{fileName}";
+        showModal = true;
+    }
+
+    private void CloseModal()
+    {
+        showModal = false;
+        currentCertificate = null;
+    }
+}
